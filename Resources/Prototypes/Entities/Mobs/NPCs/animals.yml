@@ -2340,6 +2340,7 @@
       path: /Audio/Animals/parrot_raught.ogg
   - type: Bloodstream
     bloodMaxVolume: 50
+    ## ADT tweak start
   - type: Item
     size: Normal
   - type: Clothing
@@ -2350,6 +2351,16 @@
     slots:
     - NECK
   - type: CanEscapeInventory
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: ghost-role-information-parrot-name
+    description: ghost-role-information-parrot-description
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+    ## ADT tweak end
 
 - type: entity
   parent: MobParrotBase
