@@ -2340,6 +2340,16 @@
       path: /Audio/Animals/parrot_raught.ogg
   - type: Bloodstream
     bloodMaxVolume: 50
+  - type: Item
+    size: Normal
+  - type: Clothing
+    equippedState: onneck
+    quickEquip: false
+    sprite: Mobs/Animals/parrot/parrot.rsi
+    equippedPrefix: 0
+    slots:
+    - NECK
+  - type: CanEscapeInventory
 
 - type: entity
   parent: MobParrotBase
