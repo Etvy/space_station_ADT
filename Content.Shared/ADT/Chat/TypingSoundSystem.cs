@@ -7,19 +7,6 @@ namespace Content.Shared.ADT.Chat;
 
 public sealed partial class TypingSoundSystem : EntitySystem
 {
-    // public override void Initialize()
-    // {
-    //     base.Initialize();
-    //     SubscribeLocalEvent<TypingSoundComponent, TypingChangedEvent>(StartSoundTyping);
-    // }
-
-    // private void StartSoundTyping(EntityUid uid, TypingSoundComponent component, TypingChangedEvent typingChangedEvent)
-    // {
-    //     if (typingChangedEvent.State == TypingIndicatorState.Idle)
-    //         Log.Debug("идл");
-    //     if (typingChangedEvent.State == TypingIndicatorState.Typing)
-    //         Log.Debug("тайпин");
-    // }
 
     [Dependency] private SharedAudioSystem _audio = default!;
 
