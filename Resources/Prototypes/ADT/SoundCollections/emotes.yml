@@ -390,11 +390,6 @@
 # Creature Human
 
 - type: soundCollection
-  id: ButcherCough
-  files:
-      /Audio/ADT/Butcher/butchercough.ogg
-
-- type: soundCollection
   id: ButcherScream
   files:
     - /Audio/ADT/Butcher/butcherscream.ogg
