@@ -656,3 +656,12 @@
       0: Alive
       450: Critical
       500: Dead
+  - type: MeleeWeapon
+    altDisarm: false
+    soundHit:
+      path: /Audio/ADT/murder.ogg
+    angle: 60
+    animation: WeaponArcSlash
+    damage:
+      types:
+        Blunt: 8
