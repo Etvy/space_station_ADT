@@ -183,17 +183,18 @@ namespace Content.Server.ADT.Chemistry.EntitySystems
 
         private static float GetPowerCostForReagent(string reagentId, int amount, EnergyReagentDispenserComponent comp)
         {
-            return comp.Reagents.TryGetValue(reagentId, out var cost)
-                ? cost * amount
-                : float.MaxValue;
+            if (comp.Reagents.TryGetValue(reagentId, out var cost))
+                return cost * amount;
+            return float.MaxValue;
         }
 
         private static float GetRefundPowerForReagent(string reagentId, int amount, EnergyReagentDispenserComponent comp)
         {
-            return comp.Reagents.TryGetValue(reagentId, out var cost)
-                ? cost * amount
-                : 0f;
+            if (comp.Reagents.TryGetValue(reagentId, out var cost))
+                return cost * amount;
+            return 0f;
         }
+
         private void OnMapInit(Entity<EnergyReagentDispenserComponent> entity, ref MapInitEvent args) =>
             _itemSlotsSystem.AddItemSlot(entity.Owner, SharedEnergyReagentDispenser.OutputSlotName, entity.Comp.EnergyBeakerSlot);
         private void OnEmaged(Entity<EnergyReagentDispenserComponent> ent, ref GotEmaggedEvent args)
